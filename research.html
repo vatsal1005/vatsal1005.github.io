@@ -32,7 +32,61 @@
             font-size: 15px;
             letter-spacing: 0.01em;
         }
+    nav {
+    background-color: white;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
 
+.nav-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-container a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-container a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-container a:hover {
+    color: var(--accent);
+}
+
+.nav-container a:hover::after {
+    width: 100%;
+}
+
+.nav-container a.active {
+    color: var(--accent);
+}
+
+.nav-container a.active::after {
+    width: 100%;
+}
         .container {
             max-width: 720px;
             margin: 0 auto;
@@ -85,10 +139,10 @@
 
         p {
             color: var(--text-secondary);
-            margin-bottom: 16px;
-            text-align: justify;
-            hyphens: auto;
-        }
+                margin-bottom: 16px;
+                text-align: left;
+                hyphens: none;
+            }
 
         @media (max-width: 640px) {
             .container {
@@ -110,10 +164,10 @@
     </style>
 </head>
 <body>
-    <nav>
+   <nav>
     <div class="nav-container">
-        <a href="index.html" class="active">Home</a>
-        <a href="research.html">Research Interests</a>
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research Interests</a>
     </div>
     </nav>
     <div class="container">
