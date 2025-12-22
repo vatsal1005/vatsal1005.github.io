@@ -112,12 +112,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
+            text-align: right;
         }
 
         .header-text {
             width: 100%;
             max-width: 600px;
+            text-align: right;
         }
 
         .profile-image-container {
@@ -160,6 +161,7 @@
             flex-wrap: wrap;
             margin-top: 20px;
             font-weight: 800;
+            justify-content: flex-end;
         }
 
         .contact-links a {
@@ -233,7 +235,7 @@
        p {
             color: var(--text-secondary);
             margin-bottom: 16px;
-            text-align: center;
+            text-align: right;
             hyphens: none;
         }
 
@@ -359,16 +361,13 @@
     }
 
     .contact-links {
-        display: flex;
-        gap: 24px;
-        flex-wrap: wrap;
-        margin-top: 20px;
-        font-weight: 800;
-        justify-content: center;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-end;
     }
 
     p {
-        text-align: center;
+        text-align: right;
     }
 
     .profile-image {
@@ -376,7 +375,6 @@
         height: 160px;
     }
 }
-
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
