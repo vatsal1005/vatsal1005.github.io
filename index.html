@@ -109,20 +109,23 @@
         }
 
         .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: left;
+            position: relative;
+        }
+
+        .header-content::after {
+            content: '';
+            display: table;
+            clear: both;
         }
 
         .header-text {
-            width: 100%;
-            max-width: 600px;
             text-align: left;
         }
 
         .profile-image-container {
-            margin-bottom: 32px;
+            float: right;
+            margin-left: 32px;
+            margin-bottom: 24px;
         }
 
         .profile-image {
@@ -366,7 +369,14 @@
     }
 
     p {
-        text-align: right;
+        text-align: left;
+    }
+
+    .profile-image-container {
+        float: none;
+        margin: 0 auto 32px;
+        display: block;
+        width: 160px;
     }
 
     .profile-image {
